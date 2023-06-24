@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:background="@drawable/custom_header_addpdf"
+        android:layout_width="match_parent"
+        android:layout_height="270dp">
+
+        <ImageView
+            android:id="@+id/img_back"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="20dp"
+            android:src="@drawable/ic_arrow_back_" />
+
+        <ImageView
+            android:id="@+id/pick_Pdf"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="20dp"
+            android:src="@drawable/ic_attach_file" />
+        <ImageView
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:src="@drawable/loggo"
+            android:paddingTop="50dp"
+            android:layout_centerHorizontal="true"
+
+            />
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/animationPDF"
+            android:layout_marginTop="30dp"
+            android:layout_centerHorizontal="true"
+            app:lottie_rawRes="@raw/openbook"
+            android:layout_width="0dp"
+            android:layout_height="00dp"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true"
+            />
+
+        <TextView
+            android:layout_alignBottom="@+id/animationPDF"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:layout_centerHorizontal="true"
+            android:textSize="20dp"
+            android:text="ADD PDF COMIC BOOK"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </RelativeLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/bookTitle"
+        app:endIconMode="clear_text"
+        android:layout_marginTop="250dp"
+        android:layout_centerHorizontal="true"
+        android:layout_width="355dp"
+        android:layout_height="wrap_content">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edt_bookTitle"
+            android:hint="Book Title"
+            android:drawableStart="@drawable/ic_book_title"
+            android:background="@drawable/custom_button_category"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/bookTitle1"
+        app:endIconMode="clear_text"
+        android:layout_below="@+id/bookTitle"
+        android:layout_marginTop="15dp"
+        android:layout_centerHorizontal="true"
+        android:layout_width="355dp"
+        android:layout_height="wrap_content">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edt_bookDecription"
+            android:hint="Deception Book"
+            android:drawableStart="@drawable/ic_book_title"
+            android:background="@drawable/custom_button_category"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/bookTitle2"
+        android:layout_below="@+id/bookTitle1"
+        android:layout_marginTop="15dp"
+        android:layout_centerHorizontal="true"
+        android:layout_width="355dp"
+        android:layout_height="wrap_content">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edt_pick_category"
+            android:hint="Category"
+            android:drawableEnd="@drawable/ic_arrow_down"
+            android:drawableStart="@drawable/ic_category"
+            android:background="@drawable/custom_button_category"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_add_PDF"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:layout_marginTop="50dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/bookTitle2"
+        android:background="@drawable/custom_button_login"
+        android:text="Thêm PDF"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"/>
+
+
+</RelativeLayout>

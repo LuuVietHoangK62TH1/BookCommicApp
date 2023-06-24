@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="match_parent"
+    android:background="#ECE4E8"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:background="@drawable/custom_background_update_books"
+        android:layout_width="match_parent"
+        android:layout_height="255dp">
+
+        <ImageView
+            android:id="@+id/img_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:src="@drawable/ic_arrow_back_" />
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/lottieAnimation"
+            app:lottie_loop="true"
+            app:lottie_autoPlay="true"
+            app:lottie_rawRes="@raw/openbook"
+            android:layout_centerInParent="true"
+            android:layout_width="180dp"
+            android:layout_height="180dp"/>
+
+        <TextView
+            android:layout_alignBottom="@+id/lottieAnimation"
+            android:layout_centerHorizontal="true"
+            android:textSize="30sp"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:text="Update Books"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+    </RelativeLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/TIP_bookTitle"
+        app:endIconMode="clear_text"
+        android:layout_marginTop="230dp"
+        android:layout_centerHorizontal="true"
+        android:layout_width="355dp"
+        android:layout_height="wrap_content">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edt_bookTitle_Update"
+            android:hint="Title book"
+            android:drawableStart="@drawable/ic_book_title"
+            android:background="@drawable/custom_button_category"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/TIP_bookTitle1"
+        app:endIconMode="clear_text"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/TIP_bookTitle"
+        android:layout_centerHorizontal="true"
+        android:layout_width="355dp"
+        android:layout_height="wrap_content">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edt_bookDecription_update"
+            android:hint="Decreption"
+            android:drawableStart="@drawable/ic_book_title"
+            android:background="@drawable/custom_button_category"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_below="@+id/TIP_bookTitle1"
+        android:id="@+id/tvCategory_layout_update"
+        android:layout_marginTop="20dp"
+        android:layout_centerHorizontal="true"
+        android:layout_width="355dp"
+        android:layout_height="wrap_content">
+        <com.google.android.material.textfield.TextInputEditText
+            android:hint="Category"
+            android:drawableStart="@drawable/ic_category"
+            android:drawableEnd="@drawable/ic_arrow_down"
+            android:id="@+id/edtCategory_update"
+            android:background="@drawable/custom_button_category"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnUpdateBook"
+        android:textColor="@color/white"
+        android:layout_marginBottom="150dp"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/custom_button_login"
+        android:text="Update"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"/>
+</RelativeLayout>

@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <RelativeLayout
+        android:id="@+id/LA_header"
+        android:background="@drawable/custom_header_addpdf"
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+
+        <ImageView
+            android:layout_marginLeft="10dp"
+            android:id="@+id/imgback_to_listComic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_arrow_back_" />
+
+        <TextView
+            android:id="@+id/header_detail_book"
+            android:layout_centerInParent="true"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:text="Book details"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:textColor="@color/white"
+            android:textSize="8sp"
+            android:layout_centerHorizontal="true"
+            android:text="N/A"
+            android:layout_below="@+id/header_detail_book"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/LA_header"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:id="@+id/LA_Linear"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <RelativeLayout
+                    android:background="@drawable/custom_img_details_book"
+                    android:layout_marginLeft="10dp"
+                    android:layout_width="130dp"
+                    android:layout_height="170dp">
+
+                    <!--                    <androidx.core.widget.ContentLoadingProgressBar-->
+                    <!--                        android:id="@+id/progress_book"-->
+                    <!--                        android:layout_width="match_parent"-->
+                    <!--                        android:layout_height="match_parent"/>-->
+                    <com.github.barteksc.pdfviewer.PDFView
+                        android:id="@+id/myPdfView"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"/>
+                </RelativeLayout>
+
+                <TableLayout
+                    android:layout_marginLeft="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:textColor="@color/black"
+                        android:id="@+id/tvTitleBook"
+                        android:textStyle="bold"
+                        android:textSize="30dp"
+                        android:text="TiTle Book: "/>
+
+
+                    <TableRow
+                        android:layout_marginTop="10dp">
+                        <TextView android:text="Category:" />
+                        <TextView
+                            android:id="@+id/tvCategoryBook"
+                            android:text="category: "/>
+                    </TableRow>
+                    <TableRow
+                        android:layout_marginTop="10dp">
+                        <TextView android:text="Size:" />
+                        <TextView
+                            android:id="@+id/sizeBook"
+                            android:text="size: "/>
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_marginTop="10dp">
+                        <TextView android:text="Views" />
+                        <TextView
+                            android:id="@+id/ViewBooks"
+                            android:text="views: "/>
+                    </TableRow>
+
+                </TableLayout>
+            </LinearLayout>
+
+            <TextView
+                android:textSize="15sp"
+                android:id="@+id/tvDecreptionBook"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_below="@+id/LA_Linear"
+                android:text="Decreption Books:"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+        </RelativeLayout>
+    </ScrollView>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_readBookDetail"
+        android:drawableTop="@drawable/ic_book_read"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:text="Read "
+        android:background="@drawable/custom_button_login"
+        android:layout_marginBottom="20dp"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:layout_width="300dp"
+        android:layout_height="50dp"/>
+
+</RelativeLayout>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@drawable/bgheader"
+    android:layout_width="match_parent"
+    android:layout_height="200dp">
+
+    <androidx.constraintlayout.utils.widget.ImageFilterView
+        android:layout_marginTop="20dp"
+        android:layout_gravity="center_horizontal"
+        android:src="@drawable/cute"
+        android:layout_width="100dp"
+        app:roundPercent="1.0"
+        android:layout_height="100dp"/>
+
+    <TextView
+        android:id="@+id/Navi_drawer_tv1"
+        android:layout_gravity="center"
+        android:textSize="20sp"
+        android:text="User 01"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+</LinearLayout>

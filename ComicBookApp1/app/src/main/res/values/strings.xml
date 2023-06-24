@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">ComicBookApp</string>
+
+    <string name="hello_blank_fragment">Search</string>
+</resources>
